@@ -19,6 +19,7 @@
     "build:prod:bundle-analyzer": "yarn build:prod --env.addons=bundleanalyzer",
     "build:prod:bundle-buddy": "yarn build:prod --env.addons=bundlebuddy",
     "precommit": "lint-staged",
+    "postcommit": "git update-index -g # https://github.com/okonet/lint-staged/issues/151#issuecomment-368686534",
     "webpack-defaults": "webpack-defaults",
     "webpack-dev-server": "webpack-dev-server"
   },
