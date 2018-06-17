@@ -1,6 +1,9 @@
 const config = {
   devtool: 'source-map',
   mode: 'development',
+  output: {
+    filename: 'index.js'
+  },
   module: {
     rules: [
       {

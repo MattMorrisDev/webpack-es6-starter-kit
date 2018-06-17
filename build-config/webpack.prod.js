@@ -15,6 +15,17 @@ const config = {
             options: {minimize: true}
           }
         ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {minimize: true}
+          },
+          'sass-loader'
+        ]
       }
     ]
   },

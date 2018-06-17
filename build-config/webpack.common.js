@@ -10,10 +10,17 @@ const config = {
   },
   module: {
     rules: [
-      /*{
+      {
         test: /\.js$/,
-        use: 'babel-loader'
-      },*/
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-transform-runtime']
+          }
+        }
+      },
       {
         test: [/\.png/, /\.jpe?g$/],
         use: [
