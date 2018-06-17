@@ -26,6 +26,7 @@ This is just a basic setup with only essential functionality.
 
 ## Things to consider adding
 
+- PostCSS Autoprefixer support
 - @babel/preset-env browser targets
 - Add express or nginx for serving production builds
 - Proxy server for use with a backend on a different port
