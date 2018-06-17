@@ -1,5 +1,6 @@
 .idea/
 *.iml
-package-lock.json
+/package-lock.json
 node_modules
 dist
+yarn-error.log
