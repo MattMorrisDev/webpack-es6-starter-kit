@@ -1,4 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 const commonPaths = require('./common-paths');
 
 const config = {
@@ -22,7 +24,7 @@ const config = {
         }
       },
       {
-        test: [/\.png/, /\.jpe?g$/],
+        test: [/\.png/, /\.jpe?g$/, /\.gif/],
         use: [
           {
             // Pictures smaller than the limit are inlined as base64 data
@@ -30,10 +32,15 @@ const config = {
             options: {limit: 10000}
           }
         ]
+      },
+      {
+        test: /\.(eot|woff2?|svg|ttf)([\?]?.*)$/,
+        use: 'file-loader'
       }
     ]
   },
   plugins: [
+    new CleanWebpackPlugin([commonPaths.outputPath], {root: commonPaths.projectRoot}),
     new HtmlWebpackPlugin({
       title: 'Page title goes here',
       template: commonPaths.indexHtmlTemplate

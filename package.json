@@ -9,7 +9,7 @@
     "debug": "node --inspect-brk webpack",
     "debug:dev": "node --inspect-brk webpack --env.env=dev",
     "debug:prod": "node --inspect-brk webpack --env.env=prod",
-    "build": "rm -rf dist && webpack",
+    "build": "webpack",
     "build:dev": "yarn build --env.env=dev",
     "build:prod": "yarn build --env.env=prod",
     "build:watch": "yarn build --watch",

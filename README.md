@@ -1,6 +1,7 @@
 # Webpack ES6 starter kit
 
 A simple starter project for bootstrapping ES6+ projects.
+This is just a basic setup with only essential functionality.
 
 - Webpack 4
 - babel support
@@ -27,3 +28,4 @@ A simple starter project for bootstrapping ES6+ projects.
 
 - @babel/preset-env browser targets
 - Add express or nginx for serving production builds
+- Proxy server for use with a backend on a different port
